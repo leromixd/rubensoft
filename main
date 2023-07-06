@@ -1,0 +1,75 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "RubenSoft - Script for CB:RO",
+   LoadingTitle = "Загружаем меню...",
+   LoadingSubtitle = "Сделано рубеном и его братанами",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "RubenClub Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "CpjJEfZcRy", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Ruben Script Paradise",
+      Subtitle = "Key System",
+      Note = "Ключ - rubenclub",
+      FileName = "RubenSoft - Key",
+      SaveKey = true,
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = "rubenclub"
+   }
+})
+
+
+Rayfield:Notify({
+   Title = "RubenClub",
+   Content = "Добро пожаловать в рубен паблик!",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "ох нихуя!",
+         Callback = function()
+         print("The user Call!")
+      end
+   },
+},
+})
+
+local Tab = Window:CreateTab("Main", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "SilentAim",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/leromixd/silentaim-counter-blox/main/silentaim"))()
+   end,
+})
+
+local Button2 = Tab:CreateButton({
+   Name = "ESP",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/leromixd/esp-roblox-counter-blox/main/main'))()
+   end,
+})
+
+local Button3 = Tab:CreateButton({
+   Name = "BunnyHop",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/kreapet/robloxscripts/main/cbro_bhop'))()
+   end,
+})
+
+local Button4 = Tab:CreateButton({
+   Name = "SkinChanger",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/PapaJoeX/Counter-Blox-Script-pastebin-Counter-Blox-Skin-Changer-/main/Counter%20Blox%20Script%20pastebin%20Counter%20Blox%20Skin%20Changer%20.lua'))()
+   end,
+})
+
+local Tab2 = Window:CreateTab("Credits", 4483362458)
+local Paragraph = Tab2:CreateParagraph({Title = "RubenClub Server", Content = "https://discord.gg/gXud2yDe"})
