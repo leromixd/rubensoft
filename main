@@ -1,4 +1,8 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local CoreGui = game:GetService("CoreGui")
+
+local Hint = Instance.new("Hint", CoreGui)
+Hint.Text = "Загружаем RubenSoft | Версия чита v0.1"
 
 local Window = Rayfield:CreateWindow({
    Name = "RubenSoft - Script for CB:RO",
@@ -71,5 +75,19 @@ local Button4 = Tab:CreateButton({
    end,
 })
 
-local Tab2 = Window:CreateTab("Credits", 4483362458)
-local Paragraph = Tab2:CreateParagraph({Title = "RubenClub Server", Content = "https://discord.gg/gXud2yDe"})
+local Tab2 = Window:CreateTab("Any Cheats", 4483362458)
+local Button = Tab2:CreateButton({
+   Name = "Stormy Fixed",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/ik3ac/stormy-fixed-counter-blox-2023/main/.gitignore"))() 
+   end,
+})
+
+local Tab3 = Window:CreateTab("Credits", 4483362458)
+local Paragraph = Tab3:CreateParagraph({Title = "Youtube Channel", Content = "https://youtube.com/@robloxscriptparadise"})
+local Paragraph = Tab3:CreateParagraph({Title = "Website", Content = "https://rspofficial.pro/"})
+local Paragraph = Tab3:CreateParagraph({Title = "Discord Server", Content = "https://discord.gg/QKHCCUJNYj"})
+
+Hint.Text = "RubenSoft | Загрузка завершена!"
+wait(1.5)
+Hint:Destroy()
